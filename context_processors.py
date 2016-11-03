@@ -5,7 +5,6 @@ from django.apps import apps
 from django.conf import settings
 from django.core.urlresolvers import reverse, NoReverseMatch
 from django.shortcuts import resolve_url
-from .models import Field
 
 
 def admin_sidebar_content(request):
@@ -92,13 +91,4 @@ def admin_sidebar_content(request):
 
     return {
         'su_admin_menu': items,
-    }
-
-
-# noinspection PyUnusedLocal
-def global_fields(request):
-
-    return {
-        field.slug.replace('global', 'gl').replace('-', '_'): field
-        for field in Field.objects.filter(slug__startswith='global-')
     }
