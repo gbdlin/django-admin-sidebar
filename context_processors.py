@@ -9,7 +9,7 @@ from django.shortcuts import resolve_url
 
 def admin_sidebar_content(request):
 
-    if not request.path.startswith('/admin/'):
+    if not request.path.startswith(reverse('admin:index')):
         return {}
 
     items = []
