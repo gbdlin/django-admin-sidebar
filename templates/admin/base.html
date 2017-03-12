@@ -24,7 +24,7 @@
         <!-- Header -->
         <div id="header">
             <div id="branding">
-                <h1 id="site-name"><a href="{% url "admin:index" %}">{% trans 'Wirtualne biuro - CMS' %}</a></h1>
+                <h1 id="site-name"><a href="{% url "admin:index" %}">{{ su_admin_name }}</a></h1>
             </div>
             {% block usertools %}
             {% if has_permission %}
@@ -103,6 +103,18 @@
 
 </div>
 <!-- END Container -->
+
+<script>
+    (function($) {
+        $('a[href^="#"]').on('click', function(e){
+            $('#su-content').scrollTop(0);
+        });
+        $('#su-content').scrollTop(0);
+        $(function() {
+            $('#su-content').scrollTop(0);
+        })
+    })(django.jQuery)
+</script>
 
 </body>
 </html>

@@ -91,4 +91,5 @@ def admin_sidebar_content(request):
 
     return {
         'su_admin_menu': items,
+        'su_admin_name': settings.SU_ADMIN_NAME
     }
