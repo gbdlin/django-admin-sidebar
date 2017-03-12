@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.apps import apps
-from django.conf import settings
+from .settings import settings
 from django.core.urlresolvers import reverse, NoReverseMatch
 from django.shortcuts import resolve_url
 
@@ -91,5 +91,5 @@ def admin_sidebar_content(request):
 
     return {
         'su_admin_menu': items,
-        'su_admin_name': settings.SU_ADMIN_NAME
+        'su_admin_name': settings.SU_ADMIN_NAME,
     }
