@@ -125,4 +125,11 @@ td.action-checkbox {
 .inline-related.section-hidden {
   opacity: 0.6; }
 
+.form-row select, .form-row .vTextField {
+  box-sizing: border-box;
+  width: calc(20em + 12px); }
+
+.mce-tinymce {
+  overflow: hidden; }
+
 /*# sourceMappingURL=admin-sidebar.css.map */
