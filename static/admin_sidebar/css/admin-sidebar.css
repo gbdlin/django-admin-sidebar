@@ -132,4 +132,7 @@ td.action-checkbox {
 .mce-tinymce {
   overflow: hidden; }
 
+.required label:after, label.required:after {
+  content: "*" !important; }
+
 /*# sourceMappingURL=admin-sidebar.css.map */

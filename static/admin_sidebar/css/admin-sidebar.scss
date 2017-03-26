@@ -190,3 +190,9 @@ td.action-checkbox {
 .mce-tinymce {
   overflow: hidden;
 }
+
+.required label, label.required {
+  &:after {
+    content: "*" !important;
+  }
+}
