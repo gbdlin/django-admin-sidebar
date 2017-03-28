@@ -1,4 +1,4 @@
-.submit-row:not(.top-submit-row) {
+.submit-row:not(.top-submit-row):not(.nostick) {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -134,5 +134,25 @@ td.action-checkbox {
 
 .required label:after, label.required:after {
   content: "*" !important; }
+
+.confirmation form input[type="submit"] {
+  background: #417690;
+  border-radius: 4px;
+  padding: 10px 15px;
+  color: #fff; }
+  .confirmation form input[type="submit"]:active, .confirmation form input[type="submit"]:focus, .confirmation form input[type="submit"]:hover {
+    background: #205067; }
+.confirmation form .cancel-link {
+  display: inline-block;
+  vertical-align: middle;
+  height: 15px;
+  line-height: 15px;
+  background: #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  color: #333;
+  margin: 0 0 0 10px; }
+  .confirmation form .cancel-link:active, .confirmation form .cancel-link:focus, .confirmation form .cancel-link:hover {
+    background: #ccc; }
 
 /*# sourceMappingURL=admin-sidebar.css.map */
