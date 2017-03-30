@@ -7,10 +7,10 @@
 }
 
 body.login .submit-row {
-  position: initial;
-  bottom: initial;
-  left: initial;
-  right: initial;
+  position: initial !important;
+  bottom: initial !important;
+  left: initial !important;
+  right: initial !important;
 }
 
 html.w-su-sidebar {
