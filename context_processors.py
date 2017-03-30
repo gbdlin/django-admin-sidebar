@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 from django.apps import apps
+from django.contrib.auth import get_permission_codename
+
 from .settings import settings
 from django.core.urlresolvers import reverse, NoReverseMatch
 from django.shortcuts import resolve_url
@@ -52,6 +54,17 @@ def admin_sidebar_content(request):
                 except LookupError:
                     continue
 
+                add_permission = get_permission_codename('add', model._meta)
+                change_permission = get_permission_codename('change', model._meta)
+                delete_permission = get_permission_codename('delete', model._meta)
+                view_permission = get_permission_codename('view', model._meta)
+
+                if not  request.user.has_perm('{}.{}'.format(model._meta.app_label, add_permission)) and not \
+                        request.user.has_perm('{}.{}'.format(model._meta.app_label, change_permission)) and not \
+                        request.user.has_perm('{}.{}'.format(model._meta.app_label, delete_permission)) and not \
+                        request.user.has_perm('{}.{}'.format(model._meta.app_label, view_permission)):
+                    continue
+
                 try:
                     subit['url'] = reverse('admin:{}_{}_changelist'.format(*subitem['model'].rsplit('.', 1)))
                 except NoReverseMatch:
@@ -72,8 +85,8 @@ def admin_sidebar_content(request):
             if not it['sub']:
                 continue
             else:
-
                 it['url'] = it['sub'][0]['url']
+
         elif 'url' in item:
             it['url'] = resolve_url(item['url'])
             it['active'] = request.path == it['url'] and not already_active
