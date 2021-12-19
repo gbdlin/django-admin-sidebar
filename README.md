@@ -1,4 +1,4 @@
-# THIS PROJECT IS NOT MAINTAINED AND NEVER WAS IN A USABLE STATE WITH ANY POINT IN TIME
+# THIS PROJECT IS NOT MAINTAINED AND NEVER WAS IN A USABLE STATE IN ANY POINT IN TIME WITH ANY DJANGO VERSION!!!
 
 If you need this functionality, please use [django-admin-toolbox](https://github.com/gbdlin/django-admin-sidebar) which aims to bring more than just a sidebar.
 
