@@ -1,3 +1,7 @@
+# THIS PROJECT IS NOT MAINTAINED AND NEVER WAS IN A USABLE STATE WITH ANY POINT IN TIME
+
+If you need this functionality, please use [django-admin-toolbox](https://github.com/gbdlin/django-admin-sidebar) which aims to bring more than just a sidebar.
+
 # Admin sidebar
 
 This django app adds sidebar to the left of standard django admin template.
